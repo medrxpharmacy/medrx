@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <!-- Navy Background Disc -->
+  <rect width="512" height="512" rx="64" fill="#21468C"/>
+  
+  <!-- MED (White Bold Text/Vector) -->
+  <!-- M -->
+  <path d="M 60 80 L 125 80 L 160 210 L 195 80 L 260 80 L 260 300 L 205 300 L 205 160 L 175 270 L 145 270 L 115 160 L 115 300 L 60 300 Z" fill="#FFFFFF"/>
+  
+  <!-- ED Disc Circle -->
+  <circle cx="360" cy="260" r="170" fill="#FFFFFF"/>
+  <circle cx="360" cy="260" r="105" fill="#21468C"/>
+  <!-- Cutout line in center of ED -->
+  <rect x="345" y="90" width="30" height="340" fill="#21468C"/>
+  <!-- E lines -->
+  <rect x="280" y="195" width="80" height="25" fill="#FFFFFF"/>
+  <rect x="280" y="247.5" width="65" height="25" fill="#FFFFFF"/>
+  <rect x="280" y="300" width="80" height="25" fill="#FFFFFF"/>
+
+  <!-- Copper RX Block -->
+  <rect x="60" y="315" width="200" height="135" rx="12" fill="#B5662A"/>
+  
+  <!-- RX inside Copper Block -->
+  <text x="75" y="415" font-family="'Public Sans', 'Arial Black', sans-serif" font-weight="900" font-size="110" fill="#FFFFFF" letter-spacing="-2">Rx</text>
+</svg>

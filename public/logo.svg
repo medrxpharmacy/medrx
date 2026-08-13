@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <rect width="512" height="512" rx="32" fill="#21468C"/>
+  <!-- M -->
+  <path d="M 50 70 L 120 70 L 155 200 L 190 70 L 260 70 L 260 300 L 205 300 L 205 150 L 172 265 L 138 265 L 105 150 L 105 300 L 50 300 Z" fill="#FFFFFF"/>
+  
+  <!-- ED Disc -->
+  <g fill="#FFFFFF">
+    <path d="M 370 70 C 435 70 488 123 488 188 C 488 225 470 258 442 278 C 470 298 488 331 488 368 C 488 433 435 486 370 486 L 270 486 L 270 70 Z M 365 130 L 330 130 L 330 426 L 365 426 C 405 426 430 395 430 365 C 430 335 405 305 365 305 L 330 305 L 330 250 L 365 250 C 405 250 430 220 430 190 C 430 160 405 130 365 130 Z" />
+    <rect x="290" y="150" width="80" height="28" fill="#FFFFFF"/>
+    <rect x="290" y="264" width="70" height="28" fill="#FFFFFF"/>
+    <rect x="290" y="378" width="80" height="28" fill="#FFFFFF"/>
+  </g>
+
+  <!-- Copper RX Box -->
+  <rect x="50" y="325" width="200" height="135" rx="8" fill="#B5662A"/>
+  <text x="70" y="425" font-family="'Public Sans', 'Impact', sans-serif" font-weight="900" font-size="115" fill="#FFFFFF" letter-spacing="-3">RX</text>
+</svg>
