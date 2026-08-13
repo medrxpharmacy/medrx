@@ -8,6 +8,7 @@ import { About } from './pages/About';
 import { Services } from './pages/Services';
 import { Resources } from './pages/Resources';
 import { Contact } from './pages/Contact';
+import { Careers } from './pages/Careers';
 import { ModalState, ModalType } from './types';
 
 // Scroll to top helper on route navigation
@@ -54,6 +55,7 @@ export const App: React.FC = () => {
             <Route path="/about" element={<About onOpenModal={(t) => handleOpenModal(t)} />} />
             <Route path="/services" element={<Services onOpenModal={(t) => handleOpenModal(t)} />} />
             <Route path="/resources" element={<Resources onOpenModal={(t) => handleOpenModal(t)} />} />
+            <Route path="/careers" element={<Careers onOpenModal={(t) => handleOpenModal(t)} />} />
             <Route path="/contact" element={<Contact onOpenModal={(t) => handleOpenModal(t)} />} />
             <Route path="*" element={<Home onOpenModal={(t) => handleOpenModal(t)} />} />
           </Routes>

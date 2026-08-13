@@ -16,6 +16,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenModal }) => {
     { name: 'About', path: '/about' },
     { name: 'Services', path: '/services' },
     { name: 'Resources', path: '/resources' },
+    { name: 'Careers', path: '/careers' },
     { name: 'Contact', path: '/contact' },
   ];
 

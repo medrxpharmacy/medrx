@@ -62,6 +62,9 @@ export const Footer: React.FC<FooterProps> = ({ onOpenModal }) => {
                 <Link to="/resources" className="hover:text-[#D98A4F] transition-colors">Patient Resources</Link>
               </li>
               <li>
+                <Link to="/careers" className="hover:text-[#D98A4F] transition-colors">Careers</Link>
+              </li>
+              <li>
                 <Link to="/contact" className="hover:text-[#D98A4F] transition-colors">Contact Us</Link>
               </li>
             </ul>
