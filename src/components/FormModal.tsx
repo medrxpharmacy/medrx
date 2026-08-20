@@ -135,16 +135,16 @@ export const FormModal: React.FC<FormModalProps> = ({ modalState, onClose }) => 
       (formData.currentPharmacy ? `Current Pharmacy & Phone: ${formData.currentPharmacy}\n` : '') +
       (formData.address ? `Delivery Address: ${formData.address}\n` : '') +
       `Additional Notes:\n${formData.message || 'None'}\n\n` +
-      `Destination Email: medrxpharmacy@gmail.com`;
+      `Destination Email: info@harborapothecary.com`;
 
-    const mailtoUrl = `mailto:medrxpharmacy@gmail.com?subject=${encodeURIComponent(rawSubject)}&body=${encodeURIComponent(rawBody)}`;
-    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=medrxpharmacy@gmail.com&su=${encodeURIComponent(rawSubject)}&body=${encodeURIComponent(rawBody)}`;
+    const mailtoUrl = `mailto:info@harborapothecary.com?subject=${encodeURIComponent(rawSubject)}&body=${encodeURIComponent(rawBody)}`;
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=info@harborapothecary.com&su=${encodeURIComponent(rawSubject)}&body=${encodeURIComponent(rawBody)}`;
 
     setEmailLinks({ mailtoUrl, gmailUrl });
 
     // Send email in background via FormSubmit API
     try {
-      await fetch('https://formsubmit.co/ajax/medrxpharmacy@gmail.com', {
+      await fetch('https://formsubmit.co/ajax/info@harborapothecary.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -248,7 +248,7 @@ export const FormModal: React.FC<FormModalProps> = ({ modalState, onClose }) => 
                 <CheckCircle2 className="w-8 h-8" />
               </div>
               <h3 className="font-serif text-2xl font-bold text-[#16305F]">
-                Request Sent to medrxpharmacy@gmail.com!
+                Request Sent to info@harborapothecary.com!
               </h3>
               <p className="text-slate-600 text-sm max-w-md mx-auto">
                 Your request details have been dispatched. If your email app did not open automatically, click one of the quick options below:

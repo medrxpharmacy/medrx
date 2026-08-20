@@ -95,7 +95,7 @@ export const About: React.FC<AboutProps> = ({ onOpenModal }) => {
                 <span>625 E Fordham Road, Bronx, NY 10458</span>
               </div>
               <div className="text-xs text-slate-600 font-mono">
-                Phone: 718-584-6600 · Fax: 718-584-0600 · Email: medrxpharmacy@gmail.com
+                Phone: 718-584-6600 · Fax: 718-584-0600 · Email: info@harborapothecary.com
               </div>
             </div>
           </div>

@@ -93,12 +93,12 @@ export const Footer: React.FC<FooterProps> = ({ onOpenModal }) => {
               <div className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-[#D98A4F] flex-shrink-0" />
                 <a
-                  href="https://mail.google.com/mail/?view=cm&fs=1&to=medrxpharmacy@gmail.com"
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=info@harborapothecary.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white text-xs break-all font-mono text-[#D98A4F]"
                 >
-                  medrxpharmacy@gmail.com
+                  info@harborapothecary.com
                 </a>
               </div>
             </div>

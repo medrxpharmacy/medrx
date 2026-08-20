@@ -224,16 +224,16 @@ export const Careers: React.FC<CareersProps> = ({ onOpenModal }) => {
       `Bilingual (English/Spanish): ${formData.bilingual}\n\n` +
       `Applicant Summary & Qualifications:\n` +
       `${formData.coverNote || 'None provided'}\n\n` +
-      `Destination: medrxpharmacy@gmail.com`;
+      `Destination: info@harborapothecary.com`;
 
-    const mailtoUrl = `mailto:medrxpharmacy@gmail.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
-    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=medrxpharmacy@gmail.com&su=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+    const mailtoUrl = `mailto:info@harborapothecary.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=info@harborapothecary.com&su=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
 
     setEmailLinks({ mailtoUrl, gmailUrl });
 
     // Submit in background via FormSubmit API
     try {
-      await fetch('https://formsubmit.co/ajax/medrxpharmacy@gmail.com', {
+      await fetch('https://formsubmit.co/ajax/info@harborapothecary.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -461,7 +461,7 @@ export const Careers: React.FC<CareersProps> = ({ onOpenModal }) => {
               Apply for a Career at MED RX
             </h2>
             <p className="text-slate-600 text-sm">
-              Fill out the form below to apply. Your application details will be sent directly to <span className="font-semibold text-[#21468C]">medrxpharmacy@gmail.com</span>.
+              Fill out the form below to apply. Your application details will be sent directly to <span className="font-semibold text-[#21468C]">info@harborapothecary.com</span>.
             </p>
           </div>
 
@@ -471,7 +471,7 @@ export const Careers: React.FC<CareersProps> = ({ onOpenModal }) => {
                 <CheckCircle2 className="w-10 h-10" />
               </div>
               <h3 className="font-serif font-bold text-2xl text-[#16305F]">
-                Application Dispatched to medrxpharmacy@gmail.com!
+                Application Dispatched to info@harborapothecary.com!
               </h3>
               <p className="text-slate-600 text-sm max-w-md mx-auto">
                 Thank you for applying to join the MED RX PHARMACY team. If Gmail did not open automatically, click the button below:

@@ -105,16 +105,16 @@ export const Contact: React.FC<ContactProps> = ({ onOpenModal }) => {
       `Phone Number: ${formData.phone}\n` +
       `Subject Topic: ${formData.subject}\n\n` +
       `Message Details:\n${formData.message}\n\n` +
-      `Destination: medrxpharmacy@gmail.com`;
+      `Destination: info@harborapothecary.com`;
 
-    const mailtoUrl = `mailto:medrxpharmacy@gmail.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
-    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=medrxpharmacy@gmail.com&su=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+    const mailtoUrl = `mailto:info@harborapothecary.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=info@harborapothecary.com&su=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
 
     setEmailLinks({ mailtoUrl, gmailUrl });
 
     // Send email in background via FormSubmit API
     try {
-      await fetch('https://formsubmit.co/ajax/medrxpharmacy@gmail.com', {
+      await fetch('https://formsubmit.co/ajax/info@harborapothecary.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -193,7 +193,7 @@ export const Contact: React.FC<ContactProps> = ({ onOpenModal }) => {
               <span>Call Us (718-584-6600)</span>
             </a>
             <a
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=medrxpharmacy@gmail.com"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=info@harborapothecary.com"
               target="_blank"
               rel="noopener noreferrer"
               className="px-4 py-2.5 bg-[#16305F] hover:bg-[#21468C] text-white text-xs sm:text-sm font-semibold rounded-md transition-colors flex items-center gap-2"
@@ -287,12 +287,12 @@ export const Contact: React.FC<ContactProps> = ({ onOpenModal }) => {
                   <div>
                     <strong className="block text-[#16305F]">Email Address:</strong>
                     <a
-                      href="https://mail.google.com/mail/?view=cm&fs=1&to=medrxpharmacy@gmail.com"
+                      href="https://mail.google.com/mail/?view=cm&fs=1&to=info@harborapothecary.com"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="hover:underline font-mono text-xs text-[#21468C] font-semibold flex items-center gap-1"
                     >
-                      <span>medrxpharmacy@gmail.com</span>
+                      <span>info@harborapothecary.com</span>
                       <ExternalLink className="w-3 h-3" />
                     </a>
                   </div>
@@ -344,7 +344,7 @@ export const Contact: React.FC<ContactProps> = ({ onOpenModal }) => {
                   <CheckCircle2 className="w-10 h-10" />
                 </div>
                 <h3 className="font-serif font-bold text-2xl text-[#16305F]">
-                  Message Sent to medrxpharmacy@gmail.com!
+                  Message Sent to info@harborapothecary.com!
                 </h3>
                 <p className="text-slate-600 text-sm max-w-md mx-auto">
                   Thank you for reaching out to MED RX PHARMACY. Your request has been dispatched. If your email app did not open automatically, click one of the quick options below:
