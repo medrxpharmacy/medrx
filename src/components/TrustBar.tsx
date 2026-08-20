@@ -14,12 +14,12 @@ export const TrustBar: React.FC = () => {
   return (
     <div className="bg-white border-y border-slate-200 py-6 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 justify-items-center lg:justify-items-stretch">
           {items.map((item, idx) => {
             const Icon = item.icon;
             return (
-              <div 
-                key={idx} 
+              <div
+                key={idx}
                 className="flex items-center gap-3 p-3 rounded-lg hover:bg-[#F7F8FA] transition-colors border border-transparent hover:border-slate-200"
               >
                 <div className="w-10 h-10 rounded-full bg-[#21468C]/10 text-[#21468C] flex items-center justify-center flex-shrink-0">

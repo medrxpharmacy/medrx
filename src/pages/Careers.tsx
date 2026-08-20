@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { 
-  Briefcase, GraduationCap, HeartHandshake, Clock, ShieldCheck, 
-  MapPin, CheckCircle2, Send, AlertCircle, Loader2, ExternalLink, Mail, UserCheck, Sparkles, ChevronDown, ChevronUp 
+import {
+  Briefcase, GraduationCap, HeartHandshake, Clock, ShieldCheck,
+  MapPin, CheckCircle2, Send, AlertCircle, Loader2, ExternalLink, Mail, UserCheck, Sparkles, ChevronDown, ChevronUp
 } from 'lucide-react';
 import { SectionEyebrow } from '../components/SectionEyebrow';
 
@@ -213,7 +213,7 @@ export const Careers: React.FC<CareersProps> = ({ onOpenModal }) => {
     setIsSubmitting(true);
 
     const emailSubject = `MED RX Career Application: ${formData.position} - ${formData.fullName}`;
-    const emailBody = 
+    const emailBody =
       `MED RX PHARMACY JOB APPLICATION\n` +
       `===============================\n` +
       `Applicant Name: ${formData.fullName}\n` +
@@ -288,16 +288,18 @@ export const Careers: React.FC<CareersProps> = ({ onOpenModal }) => {
     <div className="space-y-16 pb-16">
       {/* Header Banner */}
       <section className="bg-[#16305F] text-white py-16 border-b-4 border-[#B5662A]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl space-y-4">
-          <div className="inline-block px-3 py-1 bg-[#D98A4F]/20 text-[#D98A4F] font-mono text-xs font-semibold rounded uppercase tracking-wider">
-            CAREERS AT MED RX PHARMACY
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto space-y-4">
+            <div className="inline-block px-3 py-1 bg-[#D98A4F]/20 text-[#D98A4F] font-mono text-xs font-semibold rounded uppercase tracking-wider">
+              CAREERS AT MED RX PHARMACY
+            </div>
+            <h1 className="font-serif font-bold text-4xl sm:text-5xl text-white">
+              Join Our Neighborhood Pharmacy Team
+            </h1>
+            <p className="text-slate-300 text-lg leading-relaxed">
+              Serve the Bronx community with dedication, competitive compensation, and a supportive, weekday-focused work environment.
+            </p>
           </div>
-          <h1 className="font-serif font-bold text-4xl sm:text-5xl text-white">
-            Join Our Neighborhood Pharmacy Team
-          </h1>
-          <p className="text-slate-300 text-lg leading-relaxed">
-            Serve the Bronx community with dedication, competitive compensation, and a supportive, weekday-focused work environment.
-          </p>
         </div>
       </section>
 
@@ -357,12 +359,12 @@ export const Careers: React.FC<CareersProps> = ({ onOpenModal }) => {
           {jobPostings.map((job) => {
             const isExpanded = expandedJobId === job.id;
             return (
-              <div 
-                key={job.id} 
+              <div
+                key={job.id}
                 className="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden transition-all"
               >
                 {/* Job Card Header */}
-                <div 
+                <div
                   className="p-6 flex flex-col md:flex-row md:items-center justify-between gap-4 cursor-pointer hover:bg-slate-50/80 transition-colors"
                   onClick={() => setExpandedJobId(isExpanded ? null : job.id)}
                 >
@@ -394,7 +396,7 @@ export const Careers: React.FC<CareersProps> = ({ onOpenModal }) => {
                       <Send className="w-3.5 h-3.5" />
                       <span>Apply Now</span>
                     </button>
-                    <button 
+                    <button
                       className="p-2 text-slate-400 hover:text-slate-700 transition-colors"
                       aria-label="Toggle details"
                     >
@@ -531,11 +533,10 @@ export const Careers: React.FC<CareersProps> = ({ onOpenModal }) => {
                     value={formData.fullName}
                     onChange={(e) => handleChange('fullName', e.target.value)}
                     onBlur={() => handleBlur('fullName')}
-                    className={`w-full px-3.5 py-2.5 rounded-md border text-sm text-[#1A2233] focus:outline-none transition-colors ${
-                      touched.fullName && errors.fullName
+                    className={`w-full px-3.5 py-2.5 rounded-md border text-sm text-[#1A2233] focus:outline-none transition-colors ${touched.fullName && errors.fullName
                         ? 'border-rose-500 focus:ring-2 focus:ring-rose-500 bg-rose-50/20'
                         : 'border-slate-300 focus:ring-2 focus:ring-[#B5662A]'
-                    }`}
+                      }`}
                   />
                   {touched.fullName && errors.fullName && (
                     <p className="mt-1 text-xs text-rose-600 font-semibold flex items-center gap-1">
@@ -557,11 +558,10 @@ export const Careers: React.FC<CareersProps> = ({ onOpenModal }) => {
                     value={formData.email}
                     onChange={(e) => handleChange('email', e.target.value)}
                     onBlur={() => handleBlur('email')}
-                    className={`w-full px-3.5 py-2.5 rounded-md border text-sm text-[#1A2233] focus:outline-none transition-colors ${
-                      touched.email && errors.email
+                    className={`w-full px-3.5 py-2.5 rounded-md border text-sm text-[#1A2233] focus:outline-none transition-colors ${touched.email && errors.email
                         ? 'border-rose-500 focus:ring-2 focus:ring-rose-500 bg-rose-50/20'
                         : 'border-slate-300 focus:ring-2 focus:ring-[#B5662A]'
-                    }`}
+                      }`}
                   />
                   {touched.email && errors.email && (
                     <p className="mt-1 text-xs text-rose-600 font-semibold flex items-center gap-1">
@@ -581,11 +581,10 @@ export const Careers: React.FC<CareersProps> = ({ onOpenModal }) => {
                     value={formData.phone}
                     onChange={(e) => handleChange('phone', e.target.value)}
                     onBlur={() => handleBlur('phone')}
-                    className={`w-full px-3.5 py-2.5 rounded-md border text-sm text-[#1A2233] focus:outline-none transition-colors ${
-                      touched.phone && errors.phone
+                    className={`w-full px-3.5 py-2.5 rounded-md border text-sm text-[#1A2233] focus:outline-none transition-colors ${touched.phone && errors.phone
                         ? 'border-rose-500 focus:ring-2 focus:ring-rose-500 bg-rose-50/20'
                         : 'border-slate-300 focus:ring-2 focus:ring-[#B5662A]'
-                    }`}
+                      }`}
                   />
                   {touched.phone && errors.phone && (
                     <p className="mt-1 text-xs text-rose-600 font-semibold flex items-center gap-1">

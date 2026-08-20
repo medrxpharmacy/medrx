@@ -106,7 +106,7 @@ export const FormModal: React.FC<FormModalProps> = ({ modalState, onClose }) => 
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Mark all fields as touched to show errors if invalid
     setTouched({
       fullName: true,
@@ -122,10 +122,10 @@ export const FormModal: React.FC<FormModalProps> = ({ modalState, onClose }) => 
     }
 
     setIsSubmitting(true);
-    
+
     const requestTitle = getTitle();
     const rawSubject = `MED RX Web Request: ${requestTitle} - ${formData.fullName}`;
-    const rawBody = 
+    const rawBody =
       `MED RX PHARMACY INQUIRY\n` +
       `==========================\n` +
       `Request Type: ${requestTitle}\n` +
@@ -139,7 +139,7 @@ export const FormModal: React.FC<FormModalProps> = ({ modalState, onClose }) => 
 
     const mailtoUrl = `mailto:medrxpharmacy@gmail.com?subject=${encodeURIComponent(rawSubject)}&body=${encodeURIComponent(rawBody)}`;
     const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=medrxpharmacy@gmail.com&su=${encodeURIComponent(rawSubject)}&body=${encodeURIComponent(rawBody)}`;
-    
+
     setEmailLinks({ mailtoUrl, gmailUrl });
 
     // Send email in background via FormSubmit API
@@ -217,8 +217,8 @@ export const FormModal: React.FC<FormModalProps> = ({ modalState, onClose }) => 
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#16305F]/70 backdrop-blur-sm animate-in fade-in duration-200">
-      <div 
-        className="bg-white w-full max-w-lg rounded-xl shadow-2xl overflow-hidden border border-slate-200 flex flex-col max-h-[90vh]"
+      <div
+        className="bg-white w-full max-w-lg rounded-xl shadow-2xl overflow-hidden border border-slate-200 flex flex-col max-h-[95vh]"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Modal Header */}
@@ -303,11 +303,10 @@ export const FormModal: React.FC<FormModalProps> = ({ modalState, onClose }) => 
                   value={formData.fullName}
                   onChange={(e) => handleChange('fullName', e.target.value)}
                   onBlur={() => handleBlur('fullName')}
-                  className={`w-full px-3.5 py-2.5 rounded-md border text-sm text-[#1A2233] focus:outline-none transition-colors ${
-                    touched.fullName && errors.fullName
+                  className={`w-full px-3.5 py-2.5 rounded-md border text-sm text-[#1A2233] focus:outline-none transition-colors ${touched.fullName && errors.fullName
                       ? 'border-rose-500 focus:ring-2 focus:ring-rose-500 bg-rose-50/20'
                       : 'border-slate-300 focus:ring-2 focus:ring-[#B5662A]'
-                  }`}
+                    }`}
                 />
                 {touched.fullName && errors.fullName && (
                   <p className="mt-1 text-xs text-rose-600 font-semibold flex items-center gap-1">
@@ -328,11 +327,10 @@ export const FormModal: React.FC<FormModalProps> = ({ modalState, onClose }) => 
                     value={formData.phone}
                     onChange={(e) => handleChange('phone', e.target.value)}
                     onBlur={() => handleBlur('phone')}
-                    className={`w-full px-3.5 py-2.5 rounded-md border text-sm text-[#1A2233] focus:outline-none transition-colors ${
-                      touched.phone && errors.phone
+                    className={`w-full px-3.5 py-2.5 rounded-md border text-sm text-[#1A2233] focus:outline-none transition-colors ${touched.phone && errors.phone
                         ? 'border-rose-500 focus:ring-2 focus:ring-rose-500 bg-rose-50/20'
                         : 'border-slate-300 focus:ring-2 focus:ring-[#B5662A]'
-                    }`}
+                      }`}
                   />
                   {touched.phone && errors.phone && (
                     <p className="mt-1 text-xs text-rose-600 font-semibold flex items-center gap-1">
@@ -351,11 +349,10 @@ export const FormModal: React.FC<FormModalProps> = ({ modalState, onClose }) => 
                     value={formData.email}
                     onChange={(e) => handleChange('email', e.target.value)}
                     onBlur={() => handleBlur('email')}
-                    className={`w-full px-3.5 py-2.5 rounded-md border text-sm text-[#1A2233] focus:outline-none transition-colors ${
-                      touched.email && errors.email
+                    className={`w-full px-3.5 py-2.5 rounded-md border text-sm text-[#1A2233] focus:outline-none transition-colors ${touched.email && errors.email
                         ? 'border-rose-500 focus:ring-2 focus:ring-rose-500 bg-rose-50/20'
                         : 'border-slate-300 focus:ring-2 focus:ring-[#B5662A]'
-                    }`}
+                      }`}
                   />
                   {touched.email && errors.email && (
                     <p className="mt-1 text-xs text-rose-600 font-semibold flex items-center gap-1">
@@ -377,11 +374,10 @@ export const FormModal: React.FC<FormModalProps> = ({ modalState, onClose }) => 
                     value={formData.currentPharmacy}
                     onChange={(e) => handleChange('currentPharmacy', e.target.value)}
                     onBlur={() => handleBlur('currentPharmacy')}
-                    className={`w-full px-3.5 py-2.5 rounded-md border text-sm text-[#1A2233] focus:outline-none transition-colors ${
-                      touched.currentPharmacy && errors.currentPharmacy
+                    className={`w-full px-3.5 py-2.5 rounded-md border text-sm text-[#1A2233] focus:outline-none transition-colors ${touched.currentPharmacy && errors.currentPharmacy
                         ? 'border-rose-500 focus:ring-2 focus:ring-rose-500 bg-rose-50/20'
                         : 'border-slate-300 focus:ring-2 focus:ring-[#B5662A]'
-                    }`}
+                      }`}
                   />
                   {touched.currentPharmacy && errors.currentPharmacy && (
                     <p className="mt-1 text-xs text-rose-600 font-semibold flex items-center gap-1">
@@ -403,11 +399,10 @@ export const FormModal: React.FC<FormModalProps> = ({ modalState, onClose }) => 
                     value={formData.address}
                     onChange={(e) => handleChange('address', e.target.value)}
                     onBlur={() => handleBlur('address')}
-                    className={`w-full px-3.5 py-2.5 rounded-md border text-sm text-[#1A2233] focus:outline-none transition-colors ${
-                      touched.address && errors.address
+                    className={`w-full px-3.5 py-2.5 rounded-md border text-sm text-[#1A2233] focus:outline-none transition-colors ${touched.address && errors.address
                         ? 'border-rose-500 focus:ring-2 focus:ring-rose-500 bg-rose-50/20'
                         : 'border-slate-300 focus:ring-2 focus:ring-[#B5662A]'
-                    }`}
+                      }`}
                   />
                   {touched.address && errors.address && (
                     <p className="mt-1 text-xs text-rose-600 font-semibold flex items-center gap-1">

@@ -11,7 +11,12 @@
     font-size: 16px;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: 'Fraunces', serif;
     color: #16305F;
   }
@@ -22,18 +27,24 @@
   }
 
   /* Accessibility minimum touch target */
-  button, a, input, select, textarea {
+  button,
+  a,
+  input,
+  select,
+  textarea {
     min-height: 44px;
     min-width: 44px;
   }
 }
 
 @layer utilities {
+
   /* Prescription Label Card Signature */
   .rx-label-card {
     background-color: #FFFFFF;
     border-left: 4px solid #B5662A;
-    border-radius: 0.5rem; /* 8px */
+    border-radius: 0.5rem;
+    /* 8px */
     position: relative;
     box-shadow: 0 2px 8px -2px rgba(22, 48, 95, 0.08), 0 4px 16px -4px rgba(33, 70, 140, 0.06);
     transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
@@ -64,7 +75,10 @@
 
 /* Reduced motion accessibility */
 @media (prefers-reduced-motion: reduce) {
-  *, ::before, ::after {
+
+  *,
+  ::before,
+  ::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;

@@ -58,16 +58,18 @@ export const Resources: React.FC<ResourcesProps> = ({ onOpenModal }) => {
     <div className="space-y-16 pb-12">
       {/* Resources Banner */}
       <section className="bg-[#16305F] text-white py-16 border-b-4 border-[#B5662A]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl space-y-4">
-          <div className="inline-block px-3 py-1 bg-[#D98A4F]/20 text-[#D98A4F] font-mono text-xs font-semibold rounded uppercase tracking-wider">
-            PATIENT RESOURCES
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto space-y-4">
+            <div className="inline-block px-3 py-1 bg-[#D98A4F]/20 text-[#D98A4F] font-mono text-xs font-semibold rounded uppercase tracking-wider">
+              PATIENT RESOURCES
+            </div>
+            <h1 className="font-serif font-bold text-4xl sm:text-5xl text-white">
+              Medication & Health Knowledge
+            </h1>
+            <p className="text-slate-300 text-lg leading-relaxed">
+              Access trusted clinical databases, drug search tools, pill identifiers, and answers to common pharmacy questions.
+            </p>
           </div>
-          <h1 className="font-serif font-bold text-4xl sm:text-5xl text-white">
-            Medication & Health Knowledge
-          </h1>
-          <p className="text-slate-300 text-lg leading-relaxed">
-            Access trusted clinical databases, drug search tools, pill identifiers, and answers to common pharmacy questions.
-          </p>
         </div>
       </section>
 
@@ -97,7 +99,7 @@ export const Resources: React.FC<ResourcesProps> = ({ onOpenModal }) => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {externalResources.map((res, idx) => (
-            <div 
+            <div
               key={idx}
               className="bg-white rounded-xl border border-slate-200 p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow relative"
             >
@@ -146,7 +148,7 @@ export const Resources: React.FC<ResourcesProps> = ({ onOpenModal }) => {
 
         <div className="max-w-4xl mx-auto space-y-4">
           {faqs.map((faq, idx) => (
-            <div 
+            <div
               key={idx}
               className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-2"
             >

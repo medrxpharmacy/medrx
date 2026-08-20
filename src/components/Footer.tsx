@@ -13,7 +13,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenModal }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pb-12 border-b border-white/10">
-          
+
           {/* Column 1: Brand & Tagline */}
           <div className="space-y-4">
             <Link to="/" className="inline-block">
@@ -92,11 +92,11 @@ export const Footer: React.FC<FooterProps> = ({ onOpenModal }) => {
               </div>
               <div className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-[#D98A4F] flex-shrink-0" />
-                <a 
-                  href="https://mail.google.com/mail/?view=cm&fs=1&to=medrxpharmacy@gmail.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="hover:text-white text-xs truncate font-mono text-[#D98A4F]"
+                <a
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=medrxpharmacy@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white text-xs break-all font-mono text-[#D98A4F]"
                 >
                   medrxpharmacy@gmail.com
                 </a>
@@ -135,10 +135,21 @@ export const Footer: React.FC<FooterProps> = ({ onOpenModal }) => {
           <p>
             © {new Date().getFullYear()} MED RX PHARMACY. All rights reserved. 625 E Fordham Rd, Bronx, NY 10458.
           </p>
-          <div className="flex items-center gap-4">
-            <Link to="/resources" className="hover:text-slate-200">HIPAA & Privacy</Link>
-            <span>·</span>
-            <Link to="/contact" className="hover:text-slate-200">Location Map</Link>
+          <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4">
+            <div className="flex items-center gap-4">
+              <Link to="/resources" className="hover:text-slate-200">HIPAA & Privacy</Link>
+              <span>·</span>
+              <Link to="/contact" className="hover:text-slate-200">Location Map</Link>
+            </div>
+            <span className="hidden sm:inline text-white/20">·</span>
+            <a
+              href="https://www.instagram.com/staffarc?igsh=NGI1ajBjank5aWF3"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-slate-200 transition-colors"
+            >
+              Developed by <span className="text-[#D98A4F] font-semibold hover:text-white transition-colors">Staffarc</span>
+            </a>
           </div>
         </div>
       </div>

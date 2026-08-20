@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  HeartHandshake, MapPin, Phone, ShieldCheck, 
+import {
+  HeartHandshake, MapPin, Phone, ShieldCheck,
   Truck, Clock, UserCheck, CheckCircle2, Sparkles, Pill, RefreshCw
 } from 'lucide-react';
 import { SectionEyebrow } from '../components/SectionEyebrow';
@@ -59,16 +59,18 @@ export const About: React.FC<AboutProps> = ({ onOpenModal }) => {
     <div className="space-y-16 pb-12">
       {/* Header Banner */}
       <section className="bg-[#16305F] text-white py-16 border-b-4 border-[#B5662A]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4 text-center max-w-3xl">
-          <div className="inline-block px-3 py-1 bg-[#D98A4F]/20 text-[#D98A4F] font-mono text-xs font-semibold rounded uppercase tracking-wider">
-            ABOUT MED RX PHARMACY
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="space-y-4 text-center max-w-3xl mx-auto">
+            <div className="inline-block px-3 py-1 bg-[#D98A4F]/20 text-[#D98A4F] font-mono text-xs font-semibold rounded uppercase tracking-wider">
+              ABOUT MED RX PHARMACY
+            </div>
+            <h1 className="font-serif font-bold text-4xl sm:text-5xl text-white">
+              Your Neighborhood Bronx Pharmacy
+            </h1>
+            <p className="text-slate-300 text-lg leading-relaxed">
+              A neighborhood-focused community pharmacy serving the Bronx with prescription services, personalized assistance, and dependable medication care.
+            </p>
           </div>
-          <h1 className="font-serif font-bold text-4xl sm:text-5xl text-white">
-            Your Neighborhood Bronx Pharmacy
-          </h1>
-          <p className="text-slate-300 text-lg leading-relaxed">
-            A neighborhood-focused community pharmacy serving the Bronx with prescription services, personalized assistance, and dependable medication care.
-          </p>
         </div>
       </section>
 
@@ -101,10 +103,10 @@ export const About: React.FC<AboutProps> = ({ onOpenModal }) => {
           {/* Right Image / Card Callout (Navy Theme) */}
           <div className="bg-[#16305F] text-white p-8 rounded-2xl border-2 border-[#B5662A] shadow-lg space-y-6">
             <div className="flex items-center gap-4 border-b border-white/10 pb-4">
-              <img 
-                src="/logo.png" 
-                alt="MED RX PHARMACY Logo" 
-                className="w-14 h-14 object-contain flex-shrink-0" 
+              <img
+                src="/logo.png"
+                alt="MED RX PHARMACY Logo"
+                className="w-14 h-14 object-contain flex-shrink-0"
               />
               <div>
                 <h3 className="font-serif font-bold text-xl text-white">Why Neighborhood Care Matters</h3>

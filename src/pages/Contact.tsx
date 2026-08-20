@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { 
-  Phone, Printer, Mail, MapPin, Clock, ShieldAlert, 
-  Send, RefreshCw, Truck, Pill, HeartHandshake, CheckCircle2, ExternalLink, Loader2, AlertCircle 
+import {
+  Phone, Printer, Mail, MapPin, Clock, ShieldAlert,
+  Send, RefreshCw, Truck, Pill, HeartHandshake, CheckCircle2, ExternalLink, Loader2, AlertCircle
 } from 'lucide-react';
 import { SectionEyebrow } from '../components/SectionEyebrow';
 
@@ -80,7 +80,7 @@ export const Contact: React.FC<ContactProps> = ({ onOpenModal }) => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Touch all fields to surface validation feedback
     setTouched({
       name: true,
@@ -95,9 +95,9 @@ export const Contact: React.FC<ContactProps> = ({ onOpenModal }) => {
     }
 
     setIsSubmitting(true);
-    
+
     const emailSubject = `MED RX Contact Form: ${formData.subject} - ${formData.name}`;
-    const emailBody = 
+    const emailBody =
       `MED RX WEBSITE CONTACT FORM SUBMISSION\n` +
       `=======================================\n` +
       `Sender Name: ${formData.name}\n` +
@@ -165,16 +165,18 @@ export const Contact: React.FC<ContactProps> = ({ onOpenModal }) => {
     <div className="space-y-16 pb-12">
       {/* Contact Banner */}
       <section className="bg-[#16305F] text-white py-16 border-b-4 border-[#B5662A]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl space-y-4">
-          <div className="inline-block px-3 py-1 bg-[#D98A4F]/20 text-[#D98A4F] font-mono text-xs font-semibold rounded uppercase tracking-wider">
-            GET IN TOUCH
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto space-y-4">
+            <div className="inline-block px-3 py-1 bg-[#D98A4F]/20 text-[#D98A4F] font-mono text-xs font-semibold rounded uppercase tracking-wider">
+              GET IN TOUCH
+            </div>
+            <h1 className="font-serif font-bold text-4xl sm:text-5xl text-white">
+              Contact MED RX PHARMACY
+            </h1>
+            <p className="text-slate-300 text-lg leading-relaxed">
+              We are located at 625 E Fordham Road in the Bronx. Stop by, give us a call, or submit a message below.
+            </p>
           </div>
-          <h1 className="font-serif font-bold text-4xl sm:text-5xl text-white">
-            Contact MED RX PHARMACY
-          </h1>
-          <p className="text-slate-300 text-lg leading-relaxed">
-            We are located at 625 E Fordham Road in the Bronx. Stop by, give us a call, or submit a message below.
-          </p>
         </div>
       </section>
 
@@ -182,7 +184,7 @@ export const Contact: React.FC<ContactProps> = ({ onOpenModal }) => {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-md space-y-4">
           <SectionEyebrow>QUICK ACTION BUTTONS</SectionEyebrow>
-          <div className="flex flex-wrap items-center gap-3">
+          <div className="flex flex-wrap items-center gap-2">
             <a
               href="tel:7185846600"
               className="px-4 py-2.5 bg-[#21468C] hover:bg-[#16305F] text-white text-xs sm:text-sm font-semibold rounded-md transition-colors flex items-center gap-2"
@@ -243,10 +245,10 @@ export const Contact: React.FC<ContactProps> = ({ onOpenModal }) => {
       {/* Contact Details & Form Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
-          
+
           {/* Left Details Column */}
           <div className="lg:col-span-5 space-y-6">
-            
+
             {/* Address & Direct Phone Card */}
             <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
               <h2 className="font-serif font-bold text-2xl text-[#16305F]">
@@ -284,10 +286,10 @@ export const Contact: React.FC<ContactProps> = ({ onOpenModal }) => {
                   <Mail className="w-5 h-5 text-[#B5662A] flex-shrink-0" />
                   <div>
                     <strong className="block text-[#16305F]">Email Address:</strong>
-                    <a 
-                      href="https://mail.google.com/mail/?view=cm&fs=1&to=medrxpharmacy@gmail.com" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
+                    <a
+                      href="https://mail.google.com/mail/?view=cm&fs=1&to=medrxpharmacy@gmail.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="hover:underline font-mono text-xs text-[#21468C] font-semibold flex items-center gap-1"
                     >
                       <span>medrxpharmacy@gmail.com</span>
@@ -370,8 +372,8 @@ export const Contact: React.FC<ContactProps> = ({ onOpenModal }) => {
                 </button>
               </div>
             ) : (
-              <form 
-                onSubmit={handleSubmit} 
+              <form
+                onSubmit={handleSubmit}
                 className="space-y-4"
               >
                 {Object.keys(errors).length > 0 && Object.keys(touched).length > 0 && (
@@ -391,11 +393,10 @@ export const Contact: React.FC<ContactProps> = ({ onOpenModal }) => {
                     value={formData.name}
                     onChange={(e) => handleChange('name', e.target.value)}
                     onBlur={() => handleBlur('name')}
-                    className={`w-full px-3.5 py-2.5 rounded-md border text-sm text-[#1A2233] focus:outline-none transition-colors ${
-                      touched.name && errors.name
+                    className={`w-full px-3.5 py-2.5 rounded-md border text-sm text-[#1A2233] focus:outline-none transition-colors ${touched.name && errors.name
                         ? 'border-rose-500 focus:ring-2 focus:ring-rose-500 bg-rose-50/20'
                         : 'border-slate-300 focus:ring-2 focus:ring-[#B5662A]'
-                    }`}
+                      }`}
                   />
                   {touched.name && errors.name && (
                     <p className="mt-1 text-xs text-rose-600 font-semibold flex items-center gap-1">
@@ -416,11 +417,10 @@ export const Contact: React.FC<ContactProps> = ({ onOpenModal }) => {
                       value={formData.email}
                       onChange={(e) => handleChange('email', e.target.value)}
                       onBlur={() => handleBlur('email')}
-                      className={`w-full px-3.5 py-2.5 rounded-md border text-sm text-[#1A2233] focus:outline-none transition-colors ${
-                        touched.email && errors.email
+                      className={`w-full px-3.5 py-2.5 rounded-md border text-sm text-[#1A2233] focus:outline-none transition-colors ${touched.email && errors.email
                           ? 'border-rose-500 focus:ring-2 focus:ring-rose-500 bg-rose-50/20'
                           : 'border-slate-300 focus:ring-2 focus:ring-[#B5662A]'
-                      }`}
+                        }`}
                     />
                     {touched.email && errors.email && (
                       <p className="mt-1 text-xs text-rose-600 font-semibold flex items-center gap-1">
@@ -439,11 +439,10 @@ export const Contact: React.FC<ContactProps> = ({ onOpenModal }) => {
                       value={formData.phone}
                       onChange={(e) => handleChange('phone', e.target.value)}
                       onBlur={() => handleBlur('phone')}
-                      className={`w-full px-3.5 py-2.5 rounded-md border text-sm text-[#1A2233] focus:outline-none transition-colors ${
-                        touched.phone && errors.phone
+                      className={`w-full px-3.5 py-2.5 rounded-md border text-sm text-[#1A2233] focus:outline-none transition-colors ${touched.phone && errors.phone
                           ? 'border-rose-500 focus:ring-2 focus:ring-rose-500 bg-rose-50/20'
                           : 'border-slate-300 focus:ring-2 focus:ring-[#B5662A]'
-                      }`}
+                        }`}
                     />
                     {touched.phone && errors.phone && (
                       <p className="mt-1 text-xs text-rose-600 font-semibold flex items-center gap-1">
@@ -481,11 +480,10 @@ export const Contact: React.FC<ContactProps> = ({ onOpenModal }) => {
                     value={formData.message}
                     onChange={(e) => handleChange('message', e.target.value)}
                     onBlur={() => handleBlur('message')}
-                    className={`w-full px-3.5 py-2.5 rounded-md border text-sm text-[#1A2233] focus:outline-none transition-colors ${
-                      touched.message && errors.message
+                    className={`w-full px-3.5 py-2.5 rounded-md border text-sm text-[#1A2233] focus:outline-none transition-colors ${touched.message && errors.message
                         ? 'border-rose-500 focus:ring-2 focus:ring-rose-500 bg-rose-50/20'
                         : 'border-slate-300 focus:ring-2 focus:ring-[#B5662A]'
-                    }`}
+                      }`}
                   />
                   {touched.message && errors.message && (
                     <p className="mt-1 text-xs text-rose-600 font-semibold flex items-center gap-1">

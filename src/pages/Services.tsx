@@ -1,6 +1,6 @@
 import React from 'react';
-import { 
-  Pill, RefreshCw, Truck, HeartHandshake, CalendarCheck, ShieldCheck, 
+import {
+  Pill, RefreshCw, Truck, HeartHandshake, CalendarCheck, ShieldCheck,
   Clock, FileCheck, Package, ShoppingBag, DollarSign
 } from 'lucide-react';
 import { SectionEyebrow } from '../components/SectionEyebrow';
@@ -184,21 +184,23 @@ export const Services: React.FC<ServicesProps> = ({ onOpenModal }) => {
     <div className="space-y-16 pb-12">
       {/* Services Banner */}
       <section className="bg-[#16305F] text-white py-16 border-b-4 border-[#B5662A]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl space-y-4">
-          <div className="inline-block px-3 py-1 bg-[#D98A4F]/20 text-[#D98A4F] font-mono text-xs font-semibold rounded uppercase tracking-wider">
-            PHARMACY SERVICES
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto space-y-4">
+            <div className="inline-block px-3 py-1 bg-[#D98A4F]/20 text-[#D98A4F] font-mono text-xs font-semibold rounded uppercase tracking-wider">
+              PHARMACY SERVICES
+            </div>
+            <h1 className="font-serif font-bold text-4xl sm:text-5xl text-white">
+              Confirmed Pharmacy Services
+            </h1>
+            <p className="text-slate-300 text-lg leading-relaxed">
+              Every service below is active and available at MED RX PHARMACY on East Fordham Road, Bronx, NY.
+            </p>
           </div>
-          <h1 className="font-serif font-bold text-4xl sm:text-5xl text-white">
-            Confirmed Pharmacy Services
-          </h1>
-          <p className="text-slate-300 text-lg leading-relaxed">
-            Every service below is active and available at MED RX PHARMACY on East Fordham Road, Bronx, NY.
-          </p>
         </div>
       </section>
 
       {/* Quick Anchors Navigation */}
-      <div className="sticky top-20 z-30 bg-white border-b border-slate-200 shadow-sm py-3 px-4 overflow-x-auto">
+      <div className="sticky top-[88px] z-30 bg-white border-b border-slate-200 shadow-sm py-3 px-4 overflow-x-auto">
         <div className="max-w-7xl mx-auto flex items-center gap-2 text-xs font-mono whitespace-nowrap">
           <span className="text-slate-500 font-bold uppercase mr-2">Jump to:</span>
           {confirmedServices.map((s) => (
@@ -223,7 +225,7 @@ export const Services: React.FC<ServicesProps> = ({ onOpenModal }) => {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {confirmedServices.map((service) => (
-            <div key={service.id} id={service.id} className="scroll-mt-36">
+            <div key={service.id} id={service.id} className="scroll-mt-40">
               <RxLabelCard
                 title={service.title}
                 subtitle={service.subtitle}
@@ -239,7 +241,7 @@ export const Services: React.FC<ServicesProps> = ({ onOpenModal }) => {
       </section>
 
       {/* Over-the-Counter (OTC) Products Section */}
-      <section id="otc" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-36">
+      <section id="otc" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-40">
         <div className="bg-white rounded-2xl border border-slate-200 p-8 sm:p-12 shadow-lg space-y-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-slate-200 pb-6">
             <div>
@@ -261,7 +263,7 @@ export const Services: React.FC<ServicesProps> = ({ onOpenModal }) => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {otcCategories.map((cat, idx) => (
-              <div 
+              <div
                 key={idx}
                 className="p-4 rounded-lg bg-[#F7F8FA] border border-slate-200 flex items-center gap-3 hover:border-[#B5662A] transition-colors"
               >

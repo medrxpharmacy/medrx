@@ -26,8 +26,9 @@ export const Header: React.FC<HeaderProps> = ({ onOpenModal }) => {
     <header className="sticky top-0 z-40 bg-[#21468C] border-b-4 border-[#B5662A] shadow-md">
       {/* Top Utility Bar (Deep Navy Bar) */}
       <div className="bg-[#16305F] text-white text-xs py-2 px-4 font-mono border-b border-white/10">
-        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-x-6 gap-y-1">
-          <div className="flex items-center gap-4 flex-wrap">
+        <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
+          {/* Left: hours + address (hidden on small screens) */}
+          <div className="hidden sm:flex items-center gap-4">
             <span className="flex items-center gap-1.5 text-slate-200">
               <Clock className="w-3.5 h-3.5 text-[#D98A4F]" />
               <span>Mon–Fri 9:30 AM–7:00 PM · Sat–Sun Closed</span>
@@ -39,16 +40,23 @@ export const Header: React.FC<HeaderProps> = ({ onOpenModal }) => {
             </span>
           </div>
 
-          <div className="flex items-center gap-4 ml-auto">
-            <a 
-              href="tel:7185846600" 
+          {/* Mobile: centered hours only */}
+          <span className="flex sm:hidden items-center gap-1.5 text-slate-200">
+            <Clock className="w-3.5 h-3.5 text-[#D98A4F]" />
+            <span>Mon–Fri 9:30 AM – 7:00 PM</span>
+          </span>
+
+          {/* Right: phone always visible, fax hidden on small */}
+          <div className="flex items-center gap-3 ml-auto">
+            <a
+              href="tel:7185846600"
               className="flex items-center gap-1.5 text-[#D98A4F] hover:text-white font-semibold transition-colors"
             >
               <Phone className="w-3.5 h-3.5" />
               <span>718-584-6600</span>
             </a>
-            <span className="text-white/30">·</span>
-            <span className="text-slate-300">Fax: 718-584-0600</span>
+            <span className="hidden md:inline text-white/30">·</span>
+            <span className="hidden md:inline text-slate-300">Fax: 718-584-0600</span>
           </div>
         </div>
       </div>
@@ -69,11 +77,10 @@ export const Header: React.FC<HeaderProps> = ({ onOpenModal }) => {
                 <NavLink
                   key={link.path}
                   to={link.path}
-                  className={`px-4 py-2.5 rounded-md text-sm font-semibold transition-all ${
-                    isActive
+                  className={`px-4 py-2.5 rounded-md text-sm font-semibold transition-all ${isActive
                       ? 'text-white bg-[#16305F] border-b-2 border-[#D98A4F] shadow-inner'
                       : 'text-white/90 hover:text-[#D98A4F] hover:bg-white/10'
-                  }`}
+                    }`}
                 >
                   {link.name}
                 </NavLink>
@@ -127,10 +134,9 @@ export const Header: React.FC<HeaderProps> = ({ onOpenModal }) => {
                 to={link.path}
                 onClick={closeMobileMenu}
                 className={({ isActive }) =>
-                  `block px-4 py-3 rounded-md text-base font-semibold transition-colors ${
-                    isActive
-                      ? 'bg-[#21468C] text-white border-l-4 border-[#D98A4F]'
-                      : 'text-slate-200 hover:bg-white/10 hover:text-white'
+                  `block px-4 py-3 rounded-md text-base font-semibold transition-colors ${isActive
+                    ? 'bg-[#21468C] text-white border-l-4 border-[#D98A4F]'
+                    : 'text-slate-200 hover:bg-white/10 hover:text-white'
                   }`
                 }
               >

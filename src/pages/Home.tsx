@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { 
-  ArrowRight, Phone, Clock, ShieldCheck, Truck, RefreshCw, 
-  UserCheck, Pill, CalendarCheck, HeartHandshake, FileCheck, 
+import {
+  ArrowRight, Phone, Clock, ShieldCheck, Truck, RefreshCw,
+  UserCheck, Pill, CalendarCheck, HeartHandshake, FileCheck,
   ShoppingBag, Sparkles, MapPin, CheckCircle
 } from 'lucide-react';
 import { SectionEyebrow } from '../components/SectionEyebrow';
@@ -130,9 +130,9 @@ export const Home: React.FC<HomeProps> = ({ onOpenModal }) => {
       <section className="relative bg-gradient-to-b from-white via-paper to-paper overflow-hidden pt-8 pb-16 lg:py-20 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
+
             {/* Left Content Column */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
@@ -158,14 +158,14 @@ export const Home: React.FC<HomeProps> = ({ onOpenModal }) => {
                   <span>Transfer Prescription</span>
                   <ArrowRight className="w-5 h-5" />
                 </button>
-                
+
                 <Link
                   to="/contact"
                   className="px-6 py-3.5 border-2 border-[#21468C] text-[#21468C] hover:bg-[#21468C] hover:text-white font-semibold text-base rounded-lg transition-all"
                 >
                   Contact Us
                 </Link>
-                
+
                 <a
                   href="https://maps.google.com/?q=625+E+Fordham+Rd+Bronx+NY+10458"
                   target="_blank"
@@ -178,7 +178,7 @@ export const Home: React.FC<HomeProps> = ({ onOpenModal }) => {
               </div>
 
               {/* Trust Strip */}
-              <div className="pt-6 border-t border-slate-200/80 grid grid-cols-1 sm:grid-cols-3 gap-4 font-mono text-xs text-slate-600">
+              <div className="pt-6 border-t border-slate-200/80 grid grid-cols-1 sm:grid-cols-3 gap-3 font-mono text-xs text-slate-600">
                 <div className="flex items-center gap-2">
                   <Clock className="w-4 h-4 text-[#B5662A]" />
                   <span>Mon–Fri 9:30 AM–7:00 PM</span>
@@ -195,7 +195,7 @@ export const Home: React.FC<HomeProps> = ({ onOpenModal }) => {
             </motion.div>
 
             {/* Right Graphic / Motif Column */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -204,16 +204,16 @@ export const Home: React.FC<HomeProps> = ({ onOpenModal }) => {
               <div className="relative mx-auto max-w-md lg:max-w-none">
                 {/* Radial Backdrop Motif */}
                 <div className="absolute inset-0 bg-radial-hero rounded-3xl transform rotate-3 scale-105" />
-                
+
                 {/* Hero Showcase Card (Navy Theme) */}
                 <div className="relative bg-[#16305F] text-white rounded-2xl p-6 sm:p-8 shadow-2xl border-2 border-[#B5662A] space-y-6">
                   {/* Pharmacy Circular Emblem Badge */}
                   <div className="flex items-center justify-between border-b border-white/10 pb-4">
                     <div className="flex items-center gap-3">
-                      <img 
-                        src="/logo.png" 
-                        alt="MED RX PHARMACY Logo" 
-                        className="w-14 h-14 object-contain flex-shrink-0" 
+                      <img
+                        src="/logo.png"
+                        alt="MED RX PHARMACY Logo"
+                        className="w-14 h-14 object-contain flex-shrink-0"
                       />
                       <div>
                         <div className="font-serif font-bold text-lg text-white">
@@ -347,7 +347,7 @@ export const Home: React.FC<HomeProps> = ({ onOpenModal }) => {
       {/* Transfer CTA Band (Copper Accent Theme) */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-[#B5662A] text-white rounded-2xl p-8 sm:p-12 shadow-xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8">
-          <div className="space-y-3 max-w-2xl">
+          <div className="space-y-3 max-w-2xl min-w-0">
             <span className="inline-block px-3 py-1 bg-white/20 rounded font-mono text-xs font-semibold uppercase tracking-wider text-white">
               EASY 1-STEP PROCESS
             </span>
@@ -371,7 +371,7 @@ export const Home: React.FC<HomeProps> = ({ onOpenModal }) => {
       {/* Delivery CTA Band (Navy Theme) */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-[#16305F] text-white rounded-2xl p-8 sm:p-12 shadow-xl border border-[#21468C] flex flex-col md:flex-row items-center justify-between gap-8">
-          <div className="space-y-3 max-w-2xl">
+          <div className="space-y-3 max-w-2xl min-w-0">
             <span className="inline-block px-3 py-1 bg-[#D98A4F]/20 text-[#D98A4F] rounded font-mono text-xs font-semibold uppercase tracking-wider">
               FREE BRONX DELIVERY
             </span>
